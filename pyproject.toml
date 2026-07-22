@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redis-service-client"
+version = "0.1.0"
+description = "Спільний async-клієнт до redis-service: RedisEventBus (розподілений pub/sub замість in-process EventBus) + RedisLock (розподілений lock)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "redis>=5.1.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["redis_service_client*"]
